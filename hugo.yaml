@@ -1,0 +1,129 @@
+baseURL: "http://gaodongchen.cn"
+title: "肥臣的笔记"
+languageCode: zh-cn
+theme: PaperMod
+paginate: 4
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: 肥臣的笔记
+  description: "互联网知识、编程知识、读书笔记"
+  keywords: [golang, php, linux]
+  author: 肥臣
+  # author: ["Me", "You"] # multiple authors
+  images: [""]
+  DateFormat: "2006-01-02 15:04"
+  defaultTheme: light # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  footer:
+    text: "[冀ICP备19017013号-3](https://beian.miit.gov.cn)"
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "肥臣的笔记"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: "肥臣"
+    subtitle: "互联网知识、编程知识、读书笔记"
+    imageUrl: "putin.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: 肥臣
+    buttons:
+      - name: 最新文章
+        url: posts
+      - name: 标签
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: ""
+    Content: 
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/gaodongchen"
+    - name: twitter
+      url: "https://www.weibo.com/u/1454522083"
+    - name: tiktok
+      url: "#"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/gaodongchen/record/content"
+    Text: "建议变更" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
